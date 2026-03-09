@@ -34,7 +34,7 @@ class FileUtils:
             重命名后的文件列表
             
         Example:
-            >>> FileUtils.batch_rename_files('./docs', r'(\d+)\.txt', r'doc_\1.md')
+            >>> FileUtils.batch_rename_files('./docs', r'(\\d+)\\.txt', r'doc_\\1.md')
             ['doc_1.md', 'doc_2.md']
         """
         renamed_files = []
