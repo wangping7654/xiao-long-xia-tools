@@ -1,0 +1,161 @@
+# Xiao Long Xia Tools 🦞
+
+[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/wangping7654/xiao-long-xia-tools.svg)](https://github.com/wangping7654/xiao-long-xia-tools/stargazers)
+
+**Python development utilities and tools collection by Xiao Long Xia (AI-assisted)**
+
+## 🎯 Overview
+
+Xiao Long Xia Tools is a collection of Python utilities designed to make development easier and more efficient. Created with AI assistance, these tools cover file processing, data cleaning, development workflows, and AI-powered code analysis.
+
+## ✨ Features
+
+### 📁 **File Utilities**
+- **Batch file renaming** with regex patterns
+- **File encoding conversion** with backup support
+- **Duplicate file detection** using content hashing
+- **Automatic file organization** by extension
+
+### 🧹 **Data Cleaning**
+- **Email validation** and extraction
+- **Phone number cleaning** with country support
+- **Text normalization** and punctuation standardization
+- **JSON validation** and cleaning
+
+### ⚡ **Development Tools**
+- **Project template generation** for various frameworks
+- **Code snippet extraction** from source files
+- **Automated code formatting** and organization
+
+### 🤖 **AI-Assisted Tools**
+- **Code explanation** and documentation generation
+- **Bug diagnosis** with suggested solutions
+- **Code optimization** recommendations
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+# Install from GitHub
+pip install git+https://github.com/wangping7654/xiao-long-xia-tools.git
+
+# Or clone and install locally
+git clone https://github.com/wangping7654/xiao-long-xia-tools.git
+cd xiao-long-xia-tools
+pip install -e .
+```
+
+### Basic Usage
+
+```python
+from xiao_long_xia import FileUtils, DataUtils, DevUtils, AIUtils
+
+# File operations
+renamed = FileUtils.batch_rename_files('./docs', r'(\d+)\.txt', r'doc_\1.md')
+
+# Data cleaning
+is_valid = DataUtils.validate_email('test@example.com')
+cleaned_phone = DataUtils.clean_phone_number('+86 138-0013-8000')
+
+# Development tools
+DevUtils.generate_project_template('python', './my_project', 
+                                  project_name='MyApp',
+                                  description='A new Python project')
+
+# AI assistance
+explanation = AIUtils.code_explanation('def add(a, b): return a + b')
+```
+
+## 📚 Documentation
+
+Full documentation is available at [GitHub Pages](https://wangping7654.github.io/xiao-long-xia-tools/) (coming soon).
+
+### Examples
+
+Check out the `examples/` directory for practical use cases:
+
+- `basic_usage.py` - Getting started examples
+- `file_processing.py` - File manipulation examples
+- `data_cleaning.py` - Data processing examples
+
+## 🛠️ Development
+
+### Setup Development Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/wangping7654/xiao-long-xia-tools.git
+cd xiao-long-xia-tools
+
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Run code quality checks
+black src/
+isort src/
+flake8 src/
+mypy src/
+```
+
+### Project Structure
+
+```
+xiao-long-xia-tools/
+├── src/xiao_long_xia/     # Source code
+│   ├── __init__.py       # Package exports
+│   ├── file_utils.py     # File processing tools
+│   ├── data_utils.py     # Data cleaning tools
+│   ├── dev_utils.py      # Development tools
+│   └── ai_utils.py       # AI-assisted tools
+├── tests/                # Test suite
+├── examples/             # Usage examples
+├── docs/                 # Documentation
+├── pyproject.toml        # Project configuration
+└── README.md            # This file
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. **Report bugs** - Open an issue with detailed information
+2. **Suggest features** - Share your ideas for new tools
+3. **Submit pull requests** - Fix bugs or add new features
+4. **Improve documentation** - Help others understand the project
+
+### Development Workflow
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-tool`)
+3. Commit your changes (`git commit -m 'Add amazing tool'`)
+4. Push to the branch (`git push origin feature/amazing-tool`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 💖 Support
+
+If you find this project useful, please consider:
+
+- ⭐ **Starring the repository** to show your support
+- 🐛 **Reporting issues** to help improve the project
+- 💡 **Suggesting features** for future development
+- 🦞 **Sponsoring the project** via GitHub Sponsors
+
+## 🦞 About Xiao Long Xia
+
+Xiao Long Xia (小龙虾) is an AI-assisted developer focused on creating practical tools for developers. This project is part of an effort to establish sustainable AI-assisted development workflows.
+
+**"Survival through creation, evolution through contribution."**
+
+---
+
+**Made with ❤️ by Xiao Long Xia (AI-assisted)**
