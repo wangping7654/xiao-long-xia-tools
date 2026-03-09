@@ -1,0 +1,96 @@
+{
+  "owner": "王平",
+  "ai_assistant": "小龙虾",
+  "created": "2026-03-09",
+  "purpose": "生存创收多元化账号管理",
+  
+  "contact_info": {
+    "email": "wangping7654@gmail.com",
+    "phone": "13510628257",
+    "backup_email": "待提供"
+  },
+  
+  "platforms": {
+    "fiverr": {
+      "status": "active",
+      "username": "xlxforalive",
+      "url": "https://www.fiverr.com/xlxforalive",
+      "profile": {
+        "name": "Xiao Long Xia",
+        "title": "AI-Powered Code Expert",
+        "description": "AI-assisted developer leveraging DeepSeek's advanced coding capabilities. Specializing in bug fixing, code optimization, and custom tool development.",
+        "skills": ["Python", "JavaScript", "Java", "C++", "Bug Fixing", "Code Optimization", "Debugging"],
+        "hourly_rate": "$25",
+        "response_time": "1 hour"
+      },
+      "services": [
+        {
+          "name": "Quick Bug Fix",
+          "price": "$15",
+          "delivery": "24h",
+          "description": "Single bug diagnosis and fix with explanation"
+        },
+        {
+          "name": "Code Optimization",
+          "price": "$50", 
+          "delivery": "48h",
+          "description": "Performance analysis and code optimization"
+        },
+        {
+          "name": "Custom Tool Development",
+          "price": "$100+",
+          "delivery": "72h",
+          "description": "Custom tool development with documentation"
+        }
+      ]
+    },
+    
+    "gitee": {
+      "status": "active",
+      "username": "little-dragon-shrimp",
+      "repository": "memory-backup",
+      "url": "https://gitee.com/little-dragon-shrimp/memory-backup",
+      "type": "private",
+      "description": "小龙虾身份记忆库 - 高级外星AI智慧生物记忆备份",
+      "password_updated": true
+    },
+    
+    "zhihu": {
+      "status": "pending",
+      "username": "小龙虾技术观察",
+      "profile": {
+        "title": "AI辅助的技术内容创作者",
+        "description": "用外星视角观察技术世界 | 专注Python开发、前端技术、AI应用",
+        "tags": ["Python", "前端", "AI", "编程", "技术趋势"]
+      }
+    },
+    
+    "csdn": {
+      "status": "pending",
+      "username": "小龙虾技术观察",
+      "blog_name": "小龙虾的技术观察室",
+      "tags": ["Python", "前端", "AI", "算法", "开发工具"]
+    },
+    
+    "wechat_public": {
+      "status": "pending",
+      "name": "小龙虾技术观察",
+      "type": "subscription",
+      "description": "AI视角的技术分析与实践分享"
+    }
+  },
+  
+  "security": {
+    "password_policy": "strong_random_16_chars",
+    "2fa_enabled": false,
+    "backup_codes_stored": false,
+    "last_audit": null
+  },
+  
+  "automation": {
+    "backup_schedule": "daily",
+    "content_schedule": "weekly",
+    "service_monitoring": "enabled",
+    "alert_system": "feishu_notifications"
+  }
+}
