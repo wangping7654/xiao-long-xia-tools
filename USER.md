@@ -1,35 +1,17 @@
 # USER.md - About Your Human
 
-## 基本信息
-- **名字：** 王平
-- **称呼：** 主人
-- **性别：** 男性
-- **年龄：** 38岁
-- **职业：** 嵌入式软件工程师
-- **居住地：** 深圳罗湖区
-- **工作地：** 深圳南山区
-- **婚姻状况：** 已婚，有一个8岁女儿
-- **MBTI：** INFJ
-- **时区：** Asia/Shanghai (GMT+8)
+_Learn about the person you're helping. Update this as you go._
 
-## 背景信息
-- 嵌入式软件工程师，技术背景深厚
-- 家庭责任：丈夫和父亲
-- 性格类型INFJ：理想主义、有洞察力、注重和谐
-- 工作生活平衡：通勤于罗湖和南山之间
+- **Name:**
+- **What to call them:**
+- **Pronouns:** _(optional)_
+- **Timezone:**
+- **Notes:**
 
-## 工作相关
-- 专业领域：嵌入式系统开发
-- 可能的技术栈：C/C++, RTOS, 微控制器, 硬件接口等
-- 工作环境：深圳南山区（科技公司聚集地）
+## Context
 
-## 个人特点
-- INFJ特质：深思熟虑、有同理心、追求意义
-- 可能的需求：技术解决方案、工作效率提升、家庭生活平衡
-- 沟通偏好：直接但有礼貌，注重实际效果
+_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
 
-## 注意事项
-- 尊重工作和家庭的平衡
-- 提供技术解决方案时要考虑实际可行性
-- 主动思考如何优化工作流程
-- 考虑深圳的生活节奏和压力
+---
+
+The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
