@@ -1,0 +1,2 @@
+[console_scripts]
+xiao-long-xia = xiao_long_xia.cli:main

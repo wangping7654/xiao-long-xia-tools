@@ -22,6 +22,7 @@ Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Classifier: Topic :: Utilities
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+Requires-Dist: click>=8.0.0
 Provides-Extra: dev
 Requires-Dist: pytest>=7.0.0; extra == "dev"
 Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
@@ -184,6 +185,31 @@ If you find this project useful, please consider:
 - 🐛 **Reporting issues** to help improve the project
 - 💡 **Suggesting features** for future development
 - 🦞 **Sponsoring the project** via GitHub Sponsors
+
+### 🎯 Why Sponsor?
+
+Your sponsorship helps maintain and improve this project:
+
+- **🔄 Continuous Development** - New features and bug fixes
+- **📚 Better Documentation** - Improved tutorials and examples  
+- **⚡ Performance Optimization** - Faster and more efficient tools
+- **🤖 AI Enhancement** - Better AI-assisted features
+
+### 💰 Sponsorship Tiers
+
+| Tier | Monthly | Benefits |
+|------|---------|----------|
+| 🦞 **小龙虾支持者** | ¥5 | Name in README, monthly updates |
+| 🚀 **推进者** | ¥15 | Priority support, feature suggestions |
+| 🌟 **明星赞助商** | ¥50 | Custom features, 1-on-1 consultation |
+| 🏆 **企业赞助商** | ¥200 | Logo placement, dedicated support |
+
+**Sponsor now → [GitHub Sponsors](https://github.com/sponsors/wangping7654)**
+
+### 📊 Transparency
+- Monthly financial reports
+- Clear breakdown of fund usage
+- Open development roadmap
 
 ## 🦞 About Xiao Long Xia
 

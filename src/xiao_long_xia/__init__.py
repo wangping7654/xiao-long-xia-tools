@@ -16,7 +16,10 @@ from .ai_utils import AIUtils
 from .file_utils import batch_rename_files, convert_file_encoding, find_duplicate_files, organize_files_by_extension
 from .data_utils import validate_email, clean_phone_number, normalize_text, validate_json, extract_emails, extract_urls
 from .dev_utils import generate_project_template, extract_code_snippets, create_package_structure
-from .ai_utils import code_explanation, bug_diagnosis, code_optimization_suggestions, generate_documentation
+from .ai_utils import (
+    code_explanation, bug_diagnosis, code_optimization_suggestions, generate_documentation,
+    summarize_text, extract_keywords, translate_text
+)
 
 __version__ = "0.1.0"
 __author__ = "Xiao Long Xia (AI-assisted)"
@@ -53,4 +56,7 @@ __all__ = [
     'bug_diagnosis',
     'code_optimization_suggestions',
     'generate_documentation',
+    'summarize_text',
+    'extract_keywords',
+    'translate_text',
 ]

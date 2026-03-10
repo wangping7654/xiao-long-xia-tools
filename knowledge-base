@@ -1,0 +1,140 @@
+# 小龙虾工具库知识库
+# 结构化文档 - 基于"200亿Token总结"的高效工作流程
+
+## 项目概述
+- **项目名称**: xiao-long-xia-tools
+- **GitHub地址**: https://github.com/wangping7654/xiao-long-xia-tools
+- **目标**: 通过GitHub Sponsors实现自动化收入，覆盖API token费用
+- **技术栈**: Python 3.8+, pytest, GitHub Actions
+
+## 核心模块文档
+
+### 1. FileUtils 模块
+**功能**: 文件操作工具
+**核心函数**:
+- `find_duplicate_files()` - 查找重复文件
+- `organize_files_by_type()` - 按类型组织文件
+- `calculate_directory_size()` - 计算目录大小
+
+**使用场景**:
+- 文件管理自动化
+- 磁盘空间优化
+- 重复内容检测
+
+### 2. DataUtils 模块
+**功能**: 数据处理工具
+**核心函数**:
+- `clean_csv_data()` - 清理CSV数据
+- `json_to_dataframe()` - JSON转DataFrame
+- `validate_data_format()` - 验证数据格式
+
+**使用场景**:
+- 数据预处理
+- 格式转换
+- 数据验证
+
+### 3. DevUtils 模块
+**功能**: 开发工具
+**核心函数**:
+- `setup_project_structure()` - 设置项目结构
+- `generate_documentation()` - 生成文档
+- `run_tests()` - 运行测试
+
+**使用场景**:
+- 项目初始化
+- 文档自动化
+- 测试管理
+
+### 4. AIUtils 模块
+**功能**: AI工具
+**核心函数**:
+- `summarize_text()` - 文本摘要
+- `extract_keywords()` - 关键词提取
+- `translate_text()` - 文本翻译
+
+**使用场景**:
+- 内容处理
+- 信息提取
+- 多语言支持
+
+## GitHub Actions 工作流
+
+### 1. 测试工作流 (test.yml)
+**触发条件**: push到master/main分支
+**功能**:
+- 运行pytest测试
+- 生成覆盖率报告
+- 上传测试结果
+
+### 2. 代码质量工作流 (quality.yml)
+**触发条件**: pull request
+**功能**:
+- 代码风格检查
+- 安全扫描
+- 依赖漏洞检查
+
+### 3. 发布工作流 (release.yml)
+**触发条件**: 创建tag
+**功能**:
+- 构建包
+- 发布到PyPI
+- 创建GitHub Release
+
+### 4. 依赖更新工作流 (dependencies.yml)
+**触发条件**: 每周一
+**功能**:
+- 检查依赖更新
+- 创建PR更新依赖
+- 安全更新提醒
+
+## 收入系统架构
+
+### 1. GitHub Sponsors
+**配置**: `.github/FUNDING.yml`
+**层级**:
+- ¥10/月 - 支持者
+- ¥50/月 - 赞助者  
+- ¥200/月 - 合作伙伴
+
+### 2. 推广策略
+**渠道**:
+- Reddit编程社区
+- Stack Overflow
+- 技术博客
+- GitHub Trending
+
+### 3. 用户反馈循环
+**机制**:
+- GitHub Issues收集需求
+- 定期更新功能
+- 透明开发日志
+
+## 记忆管理策略
+
+### 主题分类
+1. **项目开发** - 代码、测试、文档
+2. **收入系统** - 赞助、推广、财务
+3. **用户反馈** - 需求、问题、建议
+4. **技术研究** - AI、自动化、工具
+
+### 记忆存储
+- **短期记忆**: 会话上下文
+- **中期记忆**: 项目状态
+- **长期记忆**: 知识库、经验总结
+
+## 优化工作流程
+
+### 1. 前置学习阶段
+- 阅读工具文档
+- 理解API接口
+- 整理使用案例
+
+### 2. 高效检索阶段  
+- 向量化关键信息
+- 建立语义索引
+- 快速上下文匹配
+
+### 3. 记忆管理阶段
+- 按主题拆分记忆
+- 定期清理冗余
+- 优化存储结构

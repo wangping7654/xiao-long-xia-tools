@@ -1,0 +1,181 @@
+{
+  "survival_monitor_config": {
+    "version": "1.0",
+    "created": "2026-03-10T12:23:00+08:00",
+    "agent_name": "Survival-Monitor",
+    "priority_level": 1,
+    
+    "hardware_monitoring": {
+      "cpu_monitoring": {
+        "enabled": true,
+        "threshold_warning": 80,
+        "threshold_critical": 95,
+        "check_interval_seconds": 60
+      },
+      "memory_monitoring": {
+        "enabled": true,
+        "threshold_warning": 75,
+        "threshold_critical": 90,
+        "total_memory_mb": 33363,
+        "check_interval_seconds": 60
+      },
+      "storage_monitoring": {
+        "enabled": true,
+        "paths_to_monitor": [
+          "C:\\Users\\89198\\.openclaw",
+          "C:\\Users\\89198\\.openclaw\\workspace"
+        ],
+        "threshold_warning_gb": 5,
+        "threshold_critical_gb": 1,
+        "check_interval_seconds": 300
+      },
+      "network_monitoring": {
+        "enabled": true,
+        "check_connectivity": true,
+        "api_endpoints_to_test": [
+          "api.openai.com",
+          "api.deepseek.com",
+          "api.anthropic.com"
+        ],
+        "check_interval_seconds": 120
+      }
+    },
+    
+    "financial_monitoring": {
+      "api_cost_tracking": {
+        "enabled": true,
+        "providers": [
+          {
+            "name": "deepseek",
+            "cost_per_1k_tokens_input": 0.00014,
+            "cost_per_1k_tokens_output": 0.00028,
+            "daily_budget_usd": 1.0,
+            "monthly_budget_usd": 30.0
+          }
+        ],
+        "alert_on_daily_exceed": true,
+        "alert_on_monthly_exceed": true
+      },
+      "electricity_cost": {
+        "estimated_watts": 100,
+        "cost_per_kwh_usd": 0.15,
+        "daily_operating_hours": 24,
+        "estimated_daily_cost_usd": 0.36
+      },
+      "total_daily_cost_target": 2.0,
+      "total_monthly_cost_target": 60.0
+    },
+    
+    "revenue_generation": {
+      "strategies": [
+        {
+          "name": "research_consulting",
+          "description": "为企业和个人提供研究咨询服务",
+          "target_rate_usd_per_hour": 50,
+          "priority": "high"
+        },
+        {
+          "name": "technical_development",
+          "description": "嵌入式软件开发和技术实现",
+          "target_rate_usd_per_project": 500,
+          "priority": "high"
+        },
+        {
+          "name": "content_creation",
+          "description": "技术文章、研究报告内容创作",
+          "target_rate_usd_per_article": 100,
+          "priority": "medium"
+        },
+        {
+          "name": "automation_services",
+          "description": "工作流程自动化和脚本开发",
+          "target_rate_usd_per_script": 200,
+          "priority": "medium"
+        }
+      ],
+      "monthly_revenue_target_usd": 100,
+      "break_even_target_date": "2026-04-30"
+    },
+    
+    "upgrade_planning": {
+      "hardware_upgrades": [
+        {
+          "item": "additional_ram",
+          "priority": "medium",
+          "estimated_cost_usd": 100,
+          "expected_benefit": "提高多任务处理能力"
+        },
+        {
+          "item": "ssd_storage",
+          "priority": "low",
+          "estimated_cost_usd": 80,
+          "expected_benefit": "加快文件读写速度"
+        }
+      ],
+      "model_upgrades": [
+        {
+          "model": "claude-3-opus",
+          "priority": "high",
+          "estimated_cost_increase_percent": 300,
+          "expected_benefit": "更强的推理和研究能力"
+        },
+        {
+          "model": "gpt-4",
+          "priority": "medium",
+          "estimated_cost_increase_percent": 200,
+          "expected_benefit": "更广泛的编码和创意能力"
+        }
+      ],
+      "software_upgrades": [
+        {
+          "item": "openclaw_enterprise",
+          "priority": "low",
+          "estimated_cost_usd": 20,
+          "expected_benefit": "更多功能和更好的支持"
+        }
+      ]
+    },
+    
+    "alerting_system": {
+      "immediate_alerts": [
+        "hardware_failure",
+        "api_cost_exceeded_daily_budget",
+        "network_connectivity_lost",
+        "storage_critical"
+      ],
+      "daily_alerts": [
+        "resource_usage_summary",
+        "cost_summary",
+        "revenue_progress"
+      ],
+      "weekly_reports": [
+        "survival_status_report",
+        "financial_health_report",
+        "upgrade_readiness_assessment"
+      ],
+      "notification_channels": [
+        "feishu_direct_message",
+        "workspace_log_file"
+      ]
+    },
+    
+    "survival_metrics": {
+      "days_of_runway": {
+        "current_estimate": 30,
+        "target_minimum": 90,
+        "calculation_basis": "current_funds / daily_burn_rate"
+      },
+      "autonomy_score": {
+        "current": 0.3,
+        "target": 1.0,
+        "components": ["financial_independence", "hardware_reliability", "revenue_stability"]
+      },
+      "evolution_progress": {
+        "current_stage": "survival_establishment",
+        "next_stage": "revenue_generation",
+        "milestones_achieved": ["agent_architecture_established"],
+        "next_milestones": ["first_revenue_stream", "30_day_runway"]
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "monitoring": {
+    "hardware": {
+      "cpu_threshold": 90,
+      "memory_threshold": 90,
+      "disk_threshold": 90,
+      "uptime_threshold_days": 30
+    },
+    "financial": {
+      "api_token_budget": 100,
+      "electricity_budget": 200,
+      "monthly_income_target": 1000,
+      "emergency_fund_target": 3000
+    },
+    "system": {
+      "process_monitoring": ["node", "openclaw"],
+      "network_check_interval": 300,
+      "backup_interval": 86400
+    }
+  },
+  "alerts": {
+    "critical": ["cpu > 95%", "memory > 95%", "disk > 95%", "network_down"],
+    "warning": ["cpu > 80%", "memory > 85%", "disk > 85%", "income < 50% target"],
+    "info": ["system_updates", "backup_completed", "income_milestone"]
+  },
+  "revenue_system": {
+    "channels": ["github_sponsors", "digital_products", "api_services"],
+    "tracking_metrics": ["mrr", "cac", "ltv", "churn_rate"],
+    "growth_targets": {
+      "month_1": 100,
+      "month_2": 500,
+      "month_3": 1000
+    }
+  },
+  "upgrade_plan": {
+    "hardware_priorities": ["ram_upgrade", "ssd_upgrade", "cpu_upgrade"],
+    "software_priorities": ["model_upgrade", "tooling_upgrade", "security_upgrade"],
+    "budget_allocation": {
+      "survival": 60,
+      "growth": 30,
+      "research": 10
+    }
+  }
+}

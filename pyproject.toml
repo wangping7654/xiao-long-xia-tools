@@ -26,7 +26,9 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Utilities",
 ]
-dependencies = []
+dependencies = [
+    "click>=8.0.0",
+]
 requires-python = ">=3.8"
 
 [project.urls]
@@ -53,6 +55,9 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.package-data]
 "*" = ["py.typed"]
+
+[project.scripts]
+xiao-long-xia = "xiao_long_xia.cli:main"
 
 [tool.black]
 line-length = 88

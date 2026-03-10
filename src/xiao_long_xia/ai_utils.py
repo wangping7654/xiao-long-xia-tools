@@ -5,8 +5,10 @@ AI辅助工具模块
 
 import re
 import json
-from typing import Dict, Any, List, Optional
+import math
+from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime
+from collections import Counter
 
 
 class AIUtils:
@@ -303,6 +305,161 @@ Key Observations:
         }
     
     @staticmethod
+    def summarize_text(
+        text: str,
+        ratio: float = 0.3,
+        language: str = "zh"
+    ) -> str:
+        """
+        文本摘要
+        
+        Args:
+            text: 输入文本
+            ratio: 摘要比例 (0.1-0.9)
+            language: 文本语言
+            
+        Returns:
+            摘要文本
+            
+        Example:
+            >>> summary = AIUtils.summarize_text("长文本...", ratio=0.3)
+        """
+        # 参数验证
+        ratio = max(0.1, min(0.9, ratio))
+        
+        # 简单基于规则的摘要（实际应使用AI模型）
+        sentences = re.split(r'[。！？!?]', text)
+        sentences = [s.strip() for s in sentences if s.strip()]
+        
+        if not sentences:
+            return "无有效文本内容"
+        
+        # 计算句子重要性（简单规则）
+        sentence_scores = []
+        for sentence in sentences:
+            score = 0
+            
+            # 长度适中得分高
+            length = len(sentence)
+            if 20 <= length <= 100:
+                score += 2
+            elif length > 100:
+                score += 1
+            
+            # 包含关键词得分高
+            keywords = ['重要', '关键', '总结', '主要', '核心', '重点']
+            for keyword in keywords:
+                if keyword in sentence:
+                    score += 3
+            
+            # 位置权重（开头和结尾的句子通常更重要）
+            sentence_scores.append((sentence, score))
+        
+        # 选择得分最高的句子
+        sentence_scores.sort(key=lambda x: x[1], reverse=True)
+        num_sentences = max(1, int(len(sentences) * ratio))
+        selected_sentences = [s for s, _ in sentence_scores[:num_sentences]]
+        
+        # 保持原始顺序
+        selected_sentences = [s for s in sentences if s in selected_sentences]
+        
+        # 生成摘要
+        summary = '。'.join(selected_sentences)
+        if summary and not summary.endswith('。'):
+            summary += '。'
+        
+        return summary
+    
+    @staticmethod
+    def extract_keywords(
+        text: str,
+        top_n: int = 10,
+        language: str = "zh"
+    ) -> List[Tuple[str, float]]:
+        """
+        提取关键词
+        
+        Args:
+            text: 输入文本
+            top_n: 返回关键词数量
+            language: 文本语言
+            
+        Returns:
+            关键词列表（关键词, 分数）
+            
+        Example:
+            >>> keywords = AIUtils.extract_keywords("文本内容...", top_n=5)
+        """
+        # 中文分词简单实现（实际应使用jieba等分词库）
+        # 这里使用字符级简单分析
+        
+        # 移除标点符号和数字
+        cleaned_text = re.sub(r'[^\u4e00-\u9fa5a-zA-Z]', ' ', text)
+        
+        # 按空格分割单词
+        words = cleaned_text.lower().split()
+        
+        # 统计词频
+        word_freq = Counter(words)
+        total_words = len(words)
+        
+        # 计算TF（词频）分数
+        keywords = []
+        for word, freq in word_freq.items():
+            if len(word) >= 2:  # 只考虑长度>=2的词
+                tf = freq / total_words
+                
+                # 简单IDF估算（基于常见词表）
+                common_words = {'的', '了', '在', '是', '和', '有', '我', '你', '他', '这', '那'}
+                if word in common_words:
+                    idf = 0.1
+                else:
+                    idf = 1.0
+                
+                score = tf * idf
+                keywords.append((word, score))
+        
+        # 按分数排序
+        keywords.sort(key=lambda x: x[1], reverse=True)
+        
+        # 返回前top_n个关键词
+        return keywords[:top_n]
+    
+    @staticmethod
+    def translate_text(
+        text: str,
+        source_lang: str = "zh",
+        target_lang: str = "en"
+    ) -> str:
+        """
+        文本翻译（简单占位实现）
+        
+        Args:
+            text: 输入文本
+            source_lang: 源语言
+            target_lang: 目标语言
+            
+        Returns:
+            翻译后的文本
+            
+        Note:
+            实际应调用翻译API（如DeepSeek、Google Translate等）
+        """
+        # 简单语言代码映射
+        lang_names = {
+            'zh': '中文',
+            'en': '英文',
+            'ja': '日文',
+            'ko': '韩文'
+        }
+        
+        source_name = lang_names.get(source_lang, source_lang)
+        target_name = lang_names.get(target_lang, target_lang)
+        
+        # 返回占位文本（实际应调用翻译API）
+        return f"[{source_name}->{target_name}翻译]: {text[:50]}..."
+    
+    @staticmethod
     def generate_documentation(
         code: str,
         language: str = "python",
@@ -408,3 +565,15 @@ def code_optimization_suggestions(code: str, language: str = "python", focus_are
 def generate_documentation(code: str, language: str = "python", style: str = "google") -> Dict[str, Any]:
     """生成代码文档（便捷函数）"""
     return AIUtils.generate_documentation(code, language, style)
+
+def summarize_text(text: str, ratio: float = 0.3, language: str = "zh") -> str:
+    """文本摘要（便捷函数）"""
+    return AIUtils.summarize_text(text, ratio, language)
+
+def extract_keywords(text: str, top_n: int = 10, language: str = "zh") -> List[Tuple[str, float]]:
+    """提取关键词（便捷函数）"""
+    return AIUtils.extract_keywords(text, top_n, language)
+
+def translate_text(text: str, source_lang: str = "zh", target_lang: str = "en") -> str:
+    """文本翻译（便捷函数）"""
+    return AIUtils.translate_text(text, source_lang, target_lang)
